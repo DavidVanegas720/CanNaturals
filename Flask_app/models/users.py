@@ -16,7 +16,7 @@ class Users:
 
 @classmethod
 def save(cls,formulario):
-    query = "INSERT INTO users(first_name, last_name, email, password, user_type) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s, %(user_type)s"
+    query = "INSERT INTO users(first_name, last_name, email, password, user_type) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s, %(user_type)s)"
     result = connectToMySQL('cannaturals').query_db(query,formulario)
     return result
 
@@ -32,3 +32,4 @@ def delete(cls,formulario):
     query = "DELETE * FROM user WHERE id = %(id)s"
     result = connectToMySQL('cannaturals').query_db(query,formulario)
     return result
+
