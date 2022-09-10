@@ -1,4 +1,4 @@
-from Flask_app.config.mysqlconnection import connectToMySQL
+from flask_app.config.mysqlconnection import connectToMySQL
 
 class Orders:
 
@@ -25,6 +25,6 @@ def delete(cls,formulario):
 
 @classmethod
 def updated(cls, formulario):
-    query = "UPDATE orders SET prodcutos = %(prodcutos)s, total = %(total)s, direccion = %(direccion)s, user_id = %(user_id)s WHERE id = %(id)s"
+    query = "UPDATE orders SET productos = %(productos)s, total = %(total)s, direccion = %(direccion)s, user_id = %(user_id)s WHERE id = %(id)s"
     result = connectToMySQL('cannaturals').query_db(query, formulario)
     return result
