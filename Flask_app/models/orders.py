@@ -14,17 +14,17 @@ class Orders:
 @classmethod
 def save(cls,formulario):
     query = "INSERT INTO orders(productos, total, direccion, user_id,) VALUES (%(productos)s, %(total)s, %(direccion)s, %(user_id)s)"
-    result = connectToMySQL('cannaturals').query_db(query,formulario)
+    result = connectToMySQL('proyecto_grupal').query_db(query,formulario)
     return result
 
 @classmethod
 def delete(cls,formulario):
     query = "DELETE * FROM orders WHERE id = %(id)s"
-    result = connectToMySQL('cannaturals').query_db(query,formulario)
+    result = connectToMySQL('proyecto_grupal').query_db(query,formulario)
     return result
 
 @classmethod
 def updated(cls, formulario):
     query = "UPDATE orders SET productos = %(productos)s, total = %(total)s, direccion = %(direccion)s, user_id = %(user_id)s WHERE id = %(id)s"
-    result = connectToMySQL('cannaturals').query_db(query, formulario)
+    result = connectToMySQL('proyecto_grupal').query_db(query, formulario)
     return result

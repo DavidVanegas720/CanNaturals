@@ -9,7 +9,7 @@ formLogin.onsubmit = function(event){
         .then(Response => Response.json())
         .then(data=>{
             if (data.message=="validado"){
-                window.location.href = "/"
+                window.location.href = "/principal"
             }
 
             var mensajeAlerta = document.getElementById('mensajeLogin');
