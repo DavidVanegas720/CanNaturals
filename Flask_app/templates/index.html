@@ -13,142 +13,124 @@
 
 
 <body>
-<<<<<<< HEAD
+
     <main class="container--main">
+
+        <!-- <div class="contenedor"> -->
+        <!-- <header> -->
+
 
         <div class="contenedor">
             <header>
                 <div class="logo">
                     <img src=".\static\images\can1-removebg-preview.png" alt="Logo-canna">
-=======
-    <div class="contenedor">
-        <header>
-            <div class="logo">
-                <img src=".\static\images\can1-removebg-preview.png" alt="Logo-canna">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a> </li>
-                    <Li><a href="/login">Login</a> </Li>
-                    <Li><a href="/register">Register</a> </Li>
-                    <Li><a href="/cerrar">Cerrar</a> </Li>
-                </ul>
-            </nav>
-        </header>
-            <div class="row">
-                
-                <div class="img-fondo">
-                    <img src=".\static\images\CBD.jpg" >
->>>>>>> 2d0865a23ea13448e824dbc8fcbb6a05f9aad636
                 </div>
                 <nav>
                     <ul>
                         <li><a href="/">Home</a> </li>
                         <Li><a href="/login">Login</a> </Li>
                         <Li><a href="/register">Register</a> </Li>
+                        <Li><a href="/cerrar">Cerrar</a> </Li>
                     </ul>
                 </nav>
             </header>
+            <div class="row">
+
+
+               
                 <div class="row">
-                    
+
                     <div class="img-fondo">
-                        <img src=".\static\images\CBD.jpg" >
+                        <img src=".\static\images\CBD.jpg">
                     </div>
-                    <div class="img-fondo-2">
-                        <!-- <h1>El CBD tiene potentes propiedades, activa directamente los receptores de serotoninda, 
-                            causando tambien un efecto antidepresivo </h1> -->
-                        
-                    </div>
+                    
                 </div>
-    
-    
-            
-    
+            </div>
         </div>
-    
+
         <div id="content-wrapper">
-		
+
 
             <div class="column">
-                <img id=featured  src=".\static\images\aceite2.jpg " alt="Logo-canna">
-    
-                <div id="slide-wrapper" >
+                <img id=featured src=".\static\images\aceite2.jpg " alt="Logo-canna">
+
+                <div id="slide-wrapper">
                     <img id="slideLeft" class="arrow" src=".\static\images\arrow-left.png">
-    
+
                     <div id="slider">
-                        <img class="thumbnail active" src=".\static\images\aceite.jpg " alt="Logo-canna"> 
+                        <img class="thumbnail active" src=".\static\images\aceite.jpg " alt="Logo-canna">
                         <img class="thumbnail" src=" .\static\images\aceite3.jpg">
                         <img class="thumbnail" src=" .\static\images\aceite.jpg ">
-    
+
                         <!-- <img class="thumbnail" src=" .\static\images\can1-removebg-preview.png">
                         <img class="thumbnail" src=" .\static\images\can1-removebg-preview.png">
                         <img class="thumbnail" src=" .\static\images\can1-removebg-preview.png">
                         <img class="thumbnail" src=".\static\images\can1-removebg-preview.png"> -->
                     </div>
-    
+
                     <img id="slideRight" class="arrow" src=".\static\images\arrow-right.png">
                 </div>
             </div>
-<<<<<<< HEAD
-    
+
+
             <div class="column">
                 <h1>Aceite de CBD</h1>
                 <hr>
                 <h3>Cop $ 105.000 </h3>
-    
-                <p>El CBD, Actua en el sistema endocanabbinoide un sistema de miles de receptores q tiene el cuerpo y que están en el sistema nervioso central periferico, la medula espinal, los huesos, la piel y los organos.</p>
-    
+
+                <p>El CBD, Actua en el sistema endocanabbinoide un sistema de miles de receptores q tiene el cuerpo y
+                    que están en el sistema nervioso central periferico, la medula espinal, los huesos, la piel y los
+                    organos.</p>
+
                 <input value=1 type="number">
                 <a class="btn btn-dark" href="#">Add to Cart</a>
             </div>
-    
-        </div>
-  
-     
-=======
+
+
             <a href="/mostrar_productos">Ver Productos</a>
->>>>>>> 2d0865a23ea13448e824dbc8fcbb6a05f9aad636
+        </div>
+
+
+
+
+
 
 
     </main>
 
     <script src="/Flask_app/static/js/index.js"></script>
     <script>
-        	let thumbnails = document.getElementsByClassName('thumbnail')
+        let thumbnails = document.getElementsByClassName('thumbnail')
 
-let activeImages = document.getElementsByClassName('active')
+        let activeImages = document.getElementsByClassName('active')
 
-for (var i=0; i < thumbnails.length; i++){
+        for (var i = 0; i < thumbnails.length; i++) {
 
-    thumbnails[i].addEventListener('mouseover', function(){
-        console.log(activeImages)
-        
-        if (activeImages.length > 0){
-            activeImages[0].classList.remove('active')
+            thumbnails[i].addEventListener('mouseover', function () {
+                console.log(activeImages)
+
+                if (activeImages.length > 0) {
+                    activeImages[0].classList.remove('active')
+                }
+
+
+                this.classList.add('active')
+                document.getElementById('featured').src = this.src
+            })
         }
-        
-
-        this.classList.add('active')
-        document.getElementById('featured').src = this.src
-    })
-}
 
 
-let buttonRight = document.getElementById('slideRight');
-let buttonLeft = document.getElementById('slideLeft');
+        let buttonRight = document.getElementById('slideRight');
+        let buttonLeft = document.getElementById('slideLeft');
 
-buttonLeft.addEventListener('click', function(){
-    document.getElementById('slider').scrollLeft -= 180
-})
+        buttonLeft.addEventListener('click', function () {
+            document.getElementById('slider').scrollLeft -= 180
+        })
 
-buttonRight.addEventListener('click', function(){
-    document.getElementById('slider').scrollLeft += 180
-})
+        buttonRight.addEventListener('click', function () {
+            document.getElementById('slider').scrollLeft += 180
+        })
     </script>
 </body>
 
 </html>
-
-
-
-
