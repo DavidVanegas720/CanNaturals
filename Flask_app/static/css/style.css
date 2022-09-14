@@ -9,7 +9,6 @@
 }
 
 .container--main{
-    border: 1px solid red;
     width: 1300px;
     height: 1500px;
     margin: 0 auto;
@@ -25,7 +24,7 @@ ul{
 
 header{
     display:flex;
-    width: 1250px;
+    width: 1300px;
     height: 120px;
     background-color: rgb(255, 255, 255);
     justify-content:space-between ;
@@ -153,7 +152,6 @@ nav a:hover {
 }
 
 .btn{
-    border: 1px solid black;
     padding: 8px;
     border-radius: 8px;
     text-decoration:  none;
@@ -175,30 +173,38 @@ img{
 
 /*imagen fondo */
 
-.contenedor{
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+
+
+/* -------------form-------------login */
+.cont-register{
+    border: 1px solid black;
+    width: 650px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: 10px 5px 5px black;
+    border-radius: 12px;
+}
+.titulo-login{
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap:wrap;
-    justify-content: space-around;
+.btn-sesion{
+    margin-left: 120px;
+    margin-top: 100px;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: lime;
+    font-weight: bold;
+    border: none;
+    box-shadow: 5px 5px 5px black;
 }
-
-.img-fondo{
-    min-width: 400px;
-    width: 1200px;
-} 
-
-.lema img{
-    max-width: 100%;
-    padding: 50px 0;
-} 
-
-
-
-
+.btn-sesion:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    transition: ease-in 0.2s;
+}
