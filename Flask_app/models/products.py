@@ -16,18 +16,17 @@ class Products:
     def save(cls,formulario):
         query = "INSERT INTO products(name, price, description, presentation, user_id) VALUES (%(name)s, %(price)s, %(description)s, %(presentation)s, %(user_id)s)"
         result = connectToMySQL('proyecto_grupal').query_db(query,formulario)
-        print("----------------")
         return result
 
     @classmethod
     def delete(cls,formulario):
-        query = "DELETE * FROM products WHERE id = %(id)s"
+        query = "DELETE  FROM products WHERE id = %(id)s"
         result = connectToMySQL('proyecto_grupal').query_db(query,formulario)
         return result
 
     @classmethod
     def updated(cls, formulario):
-        query = "UPDATE products SET name = %(name)s, price = %(price)s, description = %(description)s, presentation = %(presentation)s, users_id = %(user_id)s WHERE id = %(id)s"
+        query = "UPDATE products SET name = %(name)s, price = %(price)s, description = %(description)s, presentation = %(presentation)s, user_id = %(user_id)s WHERE id = %(id)s"
         result = connectToMySQL('proyecto_grupal').query_db(query, formulario)
         return result
 
@@ -35,5 +34,11 @@ class Products:
     def get_all(cls):
         query = "SELECT * FROM products"
         result = connectToMySQL('proyecto_grupal').query_db(query)
-        print(result)
         return result
+
+
+    @classmethod
+    def get_by_id(cls, formulario):
+        query = "SELECT * FROM products WHERE id = %(id)s"
+        result = connectToMySQL('proyecto_grupal').query_db(query, formulario)
+        return result[0]

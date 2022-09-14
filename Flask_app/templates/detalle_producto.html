@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src=".\static\images\aceite_CBD.png" >
+    </div>
+    {{producto.name}}<br>
+    {{producto.price}}<br>
+    {{producto.description}}
+    {% if session %}
+    <a href='/actualizar/producto/{{producto.id}}' style="color: rgb(39, 6, 2)"  >Actualizar</a>
+    <a href='/eliminar/{{producto.id}}' style="color: rgb(39, 6, 2)"  >Eliminar</a>
+    {%endif%}
+
+</body>
+</html>

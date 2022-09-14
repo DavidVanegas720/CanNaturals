@@ -20,8 +20,6 @@ class Users:
     def save(cls,formulario):
         query = "INSERT INTO users(first_name, last_name, email, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s)"
         result = connectToMySQL('proyecto_grupal').query_db(query, formulario)
-        print("-----------")
-        print(result)
         return result
     
     @classmethod

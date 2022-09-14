@@ -7,6 +7,15 @@
     <title>Mostrar Producto</title>
 </head>
 <body>
-    {{data}}
+    {%for i in data%}
+    <div>
+        <img src=".\static\images\aceite_CBD.png" >
+        <a href="/producto_detalle/{{i.id}}">{{i.name}}</a>
+        <br>
+        {{i.price}}
+        
+    </div>
+
+    {%endfor%}
 </body>
 </html>
