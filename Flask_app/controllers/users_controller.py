@@ -84,6 +84,21 @@ def inicio():
     if not bcrypt.check_password_hash(user[0]["password"],request.form["password"]):
         return jsonify(message="Contraseña incorrecta")
 
-    session['usuario_id'] = user[0]['id']
+    print(user)
+
+    session['users_id'] = user[0]['id']
             
     return jsonify(message='validado')
+
+
+@app.route('/principal')
+def principal():
+    if not session:
+        return redirect('/')
+    return render_template('inicio.html')
+
+
+@app.route('/cerrar')
+def cerrar():
+    session.clear()
+    return redirect('/')

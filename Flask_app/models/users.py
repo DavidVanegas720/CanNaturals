@@ -19,7 +19,7 @@ class Users:
     @classmethod
     def save(cls,formulario):
         query = "INSERT INTO users(first_name, last_name, email, password) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s)"
-        result = connectToMySQL('cannaturals').query_db(query, formulario)
+        result = connectToMySQL('proyecto_grupal').query_db(query, formulario)
         print("-----------")
         print(result)
         return result
@@ -27,19 +27,19 @@ class Users:
     @classmethod
     def get_user_by_id(cls,formulario):
         query = "SELECT * FROM user WHERE id = %(id)s"
-        result = connectToMySQL('cannaturals').query_db(query,formulario)
+        result = connectToMySQL('proyecto_grupal').query_db(query,formulario)
         return result
 
 
     @classmethod
     def delete(cls,formulario):
         query = "DELETE * FROM user WHERE id = %(id)s"
-        result = connectToMySQL('cannaturals').query_db(query,formulario)
+        result = connectToMySQL('proyecto_grupal').query_db(query,formulario)
         return result
 
 
     @classmethod
     def get_by_email(cls, formulario):
         query = "SELECT * FROM users WHERE email = %(email)s"
-        result = connectToMySQL('cannaturals').query_db(query, formulario)
+        result = connectToMySQL('proyecto_grupal').query_db(query, formulario)
         return result
