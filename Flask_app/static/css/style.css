@@ -83,6 +83,8 @@ nav a:hover {
     height: 200px;
     width: 500px;
     overflow: hidden;
+    margin: 0 auto;
+
 
 }
 
