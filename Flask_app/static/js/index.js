@@ -1,22 +1,31 @@
-var formRegistro = document.getElementById('formRegistro');
 
-formRegistro.onsubmit = function(event){
-    event.preventDefault();
+		let thumbnails = document.getElementsByClassName('thumbnail')
 
-    var formulario = new FormData(formRegistro);
+		let activeImages = document.getElementsByClassName('active')
 
-    fetch('/registro', {method: 'POST', body: formulario})
-        .then(Response => Response.json())
-        .then(data=>{
-            if (data.message=="validado"){
-                window.location.href = "/"
-            }
+		for (var i=0; i < thumbnails.length; i++){
 
-            var mensajeAlerta = document.getElementById('mensajeAlerta');
-            mensajeAlerta.innerHTML = data.message;
-            mensajeAlerta.classList.add("alert");
-            mensajeAlerta.classList.add("alert-danger");
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+				
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+				
 
-        });
-}
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
 
+
+		let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementById('slider').scrollLeft += 180
+		})
